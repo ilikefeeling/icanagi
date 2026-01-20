@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 55, 65, 81;
+  /* #374151 */
+  --background-rgb: 245, 247, 250;
+  /* #F5F7FA */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Markdown 에디터 다크 모드 스타일 */
+.wmde-markdown {
+  background-color: transparent !important;
+  color: #9CA3AF !important;
+}
+
+.wmde-markdown code {
+  background-color: #1A1D23 !important;
+  color: #60a5fa !important;
+}
+
+.wmde-markdown pre {
+  background-color: #1A1D23 !important;
+}
+
+/* Futurepedia 스타일 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1D23;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D3139;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Markdown prose 스타일 - Futurepedia */
+.prose {
+  color: #9CA3AF;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose h1 {
+  font-size: 2em;
+}
+
+.prose h2 {
+  font-size: 1.5em;
+}
+
+.prose h3 {
+  font-size: 1.25em;
+}
+
+.prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.75;
+}
+
+.prose a {
+  color: #3B82F6;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #60A5FA;
+}
+
+.prose code {
+  background-color: #1A1D23;
+  color: #60a5fa;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background-color: #1A1D23;
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+  border-left: 4px solid #3B82F6;
+  padding-left: 1em;
+  font-style: italic;
+  color: #6B7280;
+  margin: 1.5em 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #2D3139;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.prose th {
+  background-color: #1A1D23;
+  font-weight: 600;
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  margin: 1.5em 0;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #2D3139;
+  margin: 2em 0;
+}
