@@ -159,7 +159,7 @@ export async function createProduct(formData: FormData) {
         console.error('상품 생성 실패:', error)
 
         if (error instanceof z.ZodError) {
-            return { success: false, error: error.errors[0].message }
+            return { success: false, error: error.issues[0].message }
         }
 
         return {
@@ -415,7 +415,7 @@ export async function updateProduct(id: string, formData: FormData) {
         console.error('상품 수정 실패:', error)
 
         if (error instanceof z.ZodError) {
-            return { success: false, error: error.errors[0].message }
+            return { success: false, error: error.issues[0].message }
         }
 
         return {
