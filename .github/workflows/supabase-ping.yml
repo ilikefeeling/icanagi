@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Ping to Supabase
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
-          echo "Sending ping to: $SUPABASE_URL"
-          curl -I -s -X GET \
-            -H "apikey: $SUPABASE_ANON_KEY" \
-            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
-            "$SUPABASE_URL/rest/v1/"
+          # 👇 아래 주소(따옴표 안쪽)에 제공해주신 주소를 정확히 넣었습니다.
+          SUPABASE_URL="https://oshsttwubrtujbihqbdq.supabase.co"
+          
+          echo "Pinging: $SUPABASE_URL"
+          curl -I -s -X GET "$SUPABASE_URL/rest/v1/"
+          echo "Ping completed successfully!"
